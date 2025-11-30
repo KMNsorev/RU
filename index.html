@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КМН - Турнир по Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">КМН</div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Главная</a>
+                <a href="selectia.html" class="nav-link">Установка</a>
+                <a href="contact.html" class="nav-link">Контакты</a>
+                <a href="rules.html" class="nav-link">Правила</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h1 class="hero-title">КМН Турнир</h1>
+            <p class="hero-subtitle">Соревнования по Minecraft</p>
+            
+            <div class="countdown-section">
+                <h2>До начала турнира</h2>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <small>дней</small>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <small>часов</small>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <small>минут</small>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <small>секунд</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-info">
+                <p><strong>Дата:</strong> 5 декабря 2025 года</p>
+                <p class="note">*Дата может измениться</p>
+            </div>
+
+            <div class="cta-section">
+                <a href="https://t.me/+n7H85VgrOCc3NzAy" class="cta-button" target="_blank">
+                    📢 Подписаться на новости в Telegram
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="video-overlay" class="video-overlay hidden">
+        <video id="start-video" controls>
+            <source src="startsorevn.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <button id="close-video" class="close-button">✕ Закрыть</button>
+    </div>
+
+    <script src="countdown.js"></script>
+</body>
+</html>
