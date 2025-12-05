@@ -1,7 +1,4 @@
-const targetDate = new Date('December 5, 2025 13:40:00').getTime();
-const videoOverlay = document.getElementById('video-overlay');
-const startVideo = document.getElementById('start-video');
-const closeVideo = document.getElementById('close-video');
+const targetDate = new Date('December 5, 2025 00:00:00').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -19,25 +16,13 @@ function updateCountdown() {
     
     if (distance < 0) {
         clearInterval(countdownInterval);
-        showVideo();
+        document.querySelector('.countdown-section').innerHTML = `
+            <h2>🎉 Турнир начался! 🎉</h2>
+            <p>Сервер запущен! Подключайтесь и начинайте играть!</p>
+            <a href="selectia.html" class="cta-button" style="margin-top: 2rem;">🚀 Установить сборку</a>
+        `;
     }
 }
-
-function showVideo() {
-    videoOverlay.classList.remove('hidden');
-    startVideo.play().catch(e => console.log('Autoplay blocked:', e));
-}
-
-function hideVideo() {
-    videoOverlay.classList.add('hidden');
-    startVideo.pause();
-    startVideo.currentTime = 0;
-}
-
-closeVideo.addEventListener('click', hideVideo);
-videoOverlay.addEventListener('click', (e) => {
-    if (e.target === videoOverlay) hideVideo();
-});
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
