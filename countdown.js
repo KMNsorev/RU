@@ -1,4 +1,4 @@
-const targetDate = new Date('December 5, 2025 00:00:00').getTime();
+const targetDate = new Date('December 5, 2025 13:40:00').getTime();
 const videoOverlay = document.getElementById('video-overlay');
 const startVideo = document.getElementById('start-video');
 const closeVideo = document.getElementById('close-video');
