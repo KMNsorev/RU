@@ -1,5 +1,5 @@
 // КМН - Таймер до турнира
-const targetDate = new Date('December 5, 2025 13:45:00').getTime();
+const targetDate = new Date('December 5, 2025 13:55:00').getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
